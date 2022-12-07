@@ -1,4 +1,4 @@
-# exercise-with-Python
+# Exercise-with-Python
 Exercise using python, from the most basic to something more complex
 
 - Module1 use of how to print;
