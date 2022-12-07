@@ -1,5 +1,5 @@
 # exercise-with-Python
-exercise using python, from the most basic to something more complex
+Exercise using python, from the most basic to something more complex
 
 - Module1 use of how to print;
 
