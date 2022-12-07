@@ -1,0 +1,4 @@
+##Check if num1 is different from num2
+num1= 64*3
+num2 = 24*8
+mi_bool = num1 != num2
