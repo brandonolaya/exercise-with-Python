@@ -8,7 +8,7 @@ def file_counter(rute):
     that is saved, and back the sum of the files found
     """
     counter = 0
-    for txt in Path(rute).glob("**/*.txt"):
+    for txt in Path(rute).glob("**/*.txt"): ## busca en todoas las carpetas y dentro de ellas lso archivos txt
         counter += 1
     return counter
 
@@ -16,6 +16,7 @@ def file_counter(rute):
 def info_rutes():
     """This function is reponsible of te rute at categories, and return rute
     """
+                #se puede cambiar por Path.home para que funciones en cualquier pc
     base = Path("C:\\Users\\bvola\\OneDrive\\Documents\\python\\exercise_python\\module6\\","recipes")
     return base
 
@@ -159,27 +160,27 @@ def user_menu():
     """
     start = True
     while start:
-        menu1()
+        menu1() 
         menu = input("numero: ")
         match menu:
             case "1":
-                list_categories = show_categories(info_rutes())
-                my_category = choose_categories(list_categories)
-                my_recipes = show_recipe(my_category)
-                my_recipe = choose_recipe(my_recipes)
-                read_recipe(my_recipe)
+                list_categories = show_categories(info_rutes()) # para optener las categorias y las pasa en una lsita
+                my_category = choose_categories(list_categories) # sabe las carpetas, para elegir una
+                my_recipes = show_recipe(my_category) # permite ver los archivos que hay en la carpeta
+                my_recipe = choose_recipe(my_recipes) # permite elegir el archivo de la carpeta
+                read_recipe(my_recipe) # mustra el contenido del txt
             case "2":
                 list_categories = show_categories(info_rutes())
                 my_category = choose_categories(list_categories)
-                create_recipe(my_category)
+                create_recipe(my_category) # crea un archivo para la carpeta elegida
             case "3":
-                create_category(info_rutes())
+                create_category(info_rutes()) # crea una carpeta
             case "4":
                 list_categories = show_categories(info_rutes())
-                my_category = choose_categories(list_categories)
-                my_recipes = show_recipe(my_category)
-                my_recipe = choose_recipe(my_recipes)
-                delete_recipe(my_recipe)
+                my_category = choose_categories(list_categories) # muestra las carpetas
+                my_recipes = show_recipe(my_category) # muestra los archivos dentro de la carpeta
+                my_recipe = choose_recipe(my_recipes) # elije un archivo
+                delete_recipe(my_recipe) # borra un archivo
             case "5":
                 list_categories = show_categories(info_rutes())
                 my_category = choose_categories(list_categories)
@@ -198,6 +199,6 @@ if __name__ == '__main__':
     print(f'{"*" * 17} Welcome {name} {"*" * 17}')
     print("*" * 51, "\n")
 
-    print(f'the recipes are in the rute: {info_rutes()}')
-    print(f'total recipes: {file_counter(info_rutes())}')
-    user_menu()
+    print(f'the recipes are in the rute: {info_rutes()}')## solo muestra la ruta
+    print(f'total recipes: {file_counter(info_rutes())}')## llama la funcion y le pasa la ruta
+    user_menu() ## inicia con el menu

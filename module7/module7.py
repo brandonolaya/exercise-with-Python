@@ -239,37 +239,69 @@
 ##########################################
 ##Polimorfismos, hace que los objetos tengar diferentes formas
 
-class Vaca:
+# class Vaca:
 
-    def __init__(self, nombre):
-        self.nombre = nombre
+#     def __init__(self, nombre):
+#         self.nombre = nombre
 
-    def hablar(self):
-        print(self.nombre + " Muuu...")
-
-
-class Oveja:
-
-    def __init__(self, nombre):
-        self.nombre = nombre
-
-    def hablar(self):
-        print(self.nombre + " Beee...")
+#     def hablar(self):
+#         print(self.nombre + " Muuu...")
 
 
-mi_vaca = Vaca("Nicole")
-mi_Oveja = Oveja("Clara")
-##dos objetos de formas distintas ejecutan metodos con el mismo nombre
-# mi_vaca.hablar()
-# mi_Oveja.hablar()
+# class Oveja:
 
-animales = [mi_vaca,mi_Oveja]
-for animal in animales: ## en una iteracion llamo a los objetos de formas distintaa
-    animal.hablar() ##pero ejecutan el mismo metodos
+#     def __init__(self, nombre):
+#         self.nombre = nombre
+
+#     def hablar(self):
+#         print(self.nombre + " Beee...")
 
 
-def animal_habla(animal):
-    animal.hablar()
+# mi_vaca = Vaca("Nicole")
+# mi_Oveja = Oveja("Clara")
+# ##dos objetos de formas distintas ejecutan metodos con el mismo nombre
+# # mi_vaca.hablar()
+# # mi_Oveja.hablar()
 
-animal_habla(mi_vaca)
-animal_habla(mi_Oveja)
+# animales = [mi_vaca,mi_Oveja]
+# for animal in animales: ## en una iteracion llamo a los objetos de formas distintaa
+#     animal.hablar() ##pero ejecutan el mismo metodos
+
+
+# def animal_habla(animal): ## no importa la forma ejecutara su metodos si tiene el mismo nombre
+#     animal.hablar()
+
+# animal_habla(mi_vaca)
+# animal_habla(mi_Oveja)
+
+
+###################################
+######MEtodos especiales ########
+
+
+class CD:
+    def __init__(self, author, title, song):
+        self.author = author
+        self.title = title
+        self.song = song
+
+
+        #es como yo quiero que se manifiste mi clase cuando sea llamada
+    def __str__(self):
+        return f'Album: {self.title} de {self.author}'
+
+        ##establesco como quiero que se informe cuando llamen un leg, no recomendado
+    def __del__(self):
+        print("se murio")
+    
+    def __len__(self):
+        return self.song
+
+
+my_cd = CD("Daddy Yanke", "Talento de barrio", 16)
+print(my_cd)
+print(len(my_cd))
+del my_cd
+
+
+
