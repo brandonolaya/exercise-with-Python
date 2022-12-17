@@ -2,8 +2,10 @@
 *.png
 *.txt
 *.csv
-*.pyc
+/**/**/**/*.pyc
 .env
 *.key
 *.log
 venv/
+/**/**/**/*.csv
+/**/**/**/*.txt

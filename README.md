@@ -12,3 +12,6 @@ Exercise using python, from the most basic to something more complex
 - Module5 use try-except, dictionary comprehensions, map, filter, modules, lambda, functions, return, args, kwargs, finally games as hangman - rock paper scissors;
 
 - Module6 use open adn close files floders (create - write - read - delete), library pathlib, game as dice - face or tails,  find a prime number, graphs, last exercise recepes;
+
+- Module7 object-oriented programming practice, classes, attributes, methods, inheritance, polymorphism, encapsulation
+abstraction
