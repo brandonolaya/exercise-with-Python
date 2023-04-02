@@ -1,0 +1,2 @@
+def ladrar():
+    print("Guau")
